@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="galler.css">
+        <title>My Website</title>
+        <link rel="icon" type="image/icon" href="Media/logos.png">
+    </head>
+    <body>
+        <div class="navs">
+        <ul>
+            <div class="logo"><p>ALwebsite</p></div>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="aboutme.html">ABOUT</a></li>
+              <li><a href="gallery2.html">PROJECTS GALLERY</a></li>
+            <li><a href="contacts.html">CONTACTS</a></li>
+        </ul>
+
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+ <div class="project-card">
+    <h2>Record Management &amp; Billing System</h2>
+    <p class="title">C# Desktop App</p>
+    <p>Built for Zaki's Laundry House to manage records and billing.</p>
+ 
+    <div class="photo-grid">
+      <img src="Media/login.png" alt="Login screen" onclick="openLightbox(this.src)">
+      <img src="Media/dashboard.png" alt="Dashboard" onclick="openLightbox(this.src)">
+      <img src="Media/billing.png" alt="Billing page" onclick="openLightbox(this.src)">
+      <img src="Media/addorder.png" alt="Records page" onclick="openLightbox(this.src)">
+      <img src="Media/pricing.png" alt="Records page" onclick="openLightbox(this.src)">
+      <img src="Media/sales.png" alt="Records page" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h2>Women with Baskets</h2>
+    <p class="title">HTML & CSS Web Project</p>
+    <p>Created as a school project to showcase the artwork and background of Filipino artist Anita Magsaysay-Ho.</p>
+ 
+    <div class="photo-grid">
+      <img src="Media/abovepage.png" alt="Login screen" onclick="openLightbox(this.src)">
+      <img src="Media/belowpage.png" alt="Dashboard" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+  
+
+ 
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Enlarged screenshot">
+  </div>
+
+   <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+  </script>
+
+  <div class="overlay"></div>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
